@@ -3,7 +3,7 @@ set :repo_url, 'git@github.com:shunsugai/sample.git'
 
 # ask :branch, proc { `git rev-parse --abbrev-ref HEAD`.chomp }
 
-set :deploy_to, '/home/shun/app'
+set :deploy_to, "/home/shun/app/#{fetch(:application)}"
 set :scm, :git
 set :branch, 'master'
 set :user, 'shun'
