@@ -13,7 +13,7 @@ role :all, %w{shun@www2257ue.sakura.ne.jp}
 # definition into the server list. The second argument
 # something that quacks like a hash can be used to set
 # extended properties on the server.
-server 'www2257ue.sakura.ne.jp', user: 'shun', port: 8081, roles: %w{web app}
+server 'www2257ue.sakura.ne.jp', user: 'shun', roles: %w{web app}
 
 # you can set custom ssh options
 # it's possible to pass any option but you need to keep in mind that net/ssh understand limited list of options
