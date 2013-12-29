@@ -5,7 +5,7 @@ set :stage, :production
 # Supports bulk-adding hosts to roles, the primary
 # server in each group is considered to be the first
 # unless any hosts have the primary property set.
-role :all, %w{shun@www2257ue.sakura.ne.jp:10021}
+role :all, %w{shun@www2257ue.sakura.ne.jp}
 
 # Extended Server Syntax
 # ======================
@@ -13,7 +13,7 @@ role :all, %w{shun@www2257ue.sakura.ne.jp:10021}
 # definition into the server list. The second argument
 # something that quacks like a hash can be used to set
 # extended properties on the server.
-server 'www2257ue.sakura.ne.jp', user: 'shun', port: 10021, roles: %w{web app}
+server 'www2257ue.sakura.ne.jp', user: 'shun', port: 8081, roles: %w{web app}
 
 # you can set custom ssh options
 # it's possible to pass any option but you need to keep in mind that net/ssh understand limited list of options
@@ -39,9 +39,9 @@ server 'www2257ue.sakura.ne.jp', user: 'shun', port: 10021, roles: %w{web app}
 
 # fetch(:default_env).merge!(rails_env: :production)
 
-set :ssh_options, {
-  keys: [File.expand_path('~/.ssh/id_rsa')],
-  forward_agent: true,
-  port: 10021,
-  auth_methods: %w(publickey)
-}
+# set :ssh_options, {
+#   keys: [File.expand_path('~/.ssh/id_rsa')],
+#   forward_agent: true,
+#   port: 10021,
+#   auth_methods: %w(publickey)
+# }
