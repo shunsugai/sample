@@ -32,7 +32,7 @@ namespace :deploy do
 
   desc 'Restart application'
   task :restart do
-    invoke 'unicorn:restart'
+    invoke 'unicorn:start'
     # on roles(:app), in: :sequence, wait: 5 do
     #   invoke 'unicorn:restart'
     # end
