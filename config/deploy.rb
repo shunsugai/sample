@@ -18,7 +18,7 @@ set :linked_dirs, %w{bin log tmp/pids tmp/cache tmp/sockets vendor/bundle public
 # set :default_env, { path: "/opt/ruby/bin:$PATH" }
 # set :keep_releases, 5
 
-set :port , 10021
+set :port, 10021
 set :keep_releases, 5
 
 set :ssh_options, {
@@ -29,24 +29,15 @@ set :ssh_options, {
 }
 
 namespace :deploy do
-
   desc 'Restart application'
   task :restart do
-    invoke 'unicorn:start'
-    # on roles(:app), in: :sequence, wait: 5 do
-    #   invoke 'unicorn:restart'
-    # end
+    invoke 'unicorn:restart'
   end
 
   after :restart, :clear_cache do
     on roles(:web), in: :groups, limit: 3, wait: 10 do
-      # Here we can do anything such as:
-      # within release_path do
-      #   execute :rake, 'cache:clear'
-      # end
     end
   end
 
   after :finishing, 'deploy:cleanup'
-
 end
