@@ -1,4 +1,5 @@
 set :stage, :production
+set :migration_role, 'db'
 
 # Simple Role Syntax
 # ==================
