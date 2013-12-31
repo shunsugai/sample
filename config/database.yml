@@ -26,6 +26,7 @@ staging:
 
 production:
   adapter: sqlite3
-  database: db/production.sqlite3
+  # database: db/production.sqlite3
+  database: /home/shun/app/sample/shared/db
   pool: 5
   timeout: 5000
