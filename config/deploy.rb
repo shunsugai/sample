@@ -31,7 +31,7 @@ set :ssh_options, {
 namespace :deploy do
   desc 'Restart application'
   task :restart do
-    invoke 'unicorn:restart'
+    invoke 'unicorn:start'
   end
 
   after :restart, :clear_cache do
