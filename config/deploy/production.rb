@@ -1,9 +1,9 @@
-set :stage, :production
-set :migration_role, 'db'
+# set :stage, :production
+# set :migration_role, 'db'
 
-role :all, %w{shun@www2257ue.sakura.ne.jp}
+# role :all, %w{shun@www2257ue.sakura.ne.jp}
 
-server 'www2257ue.sakura.ne.jp', user: 'shun', roles: %w{web app db}
+# server 'www2257ue.sakura.ne.jp', user: 'shun', roles: %w{web app db}
 
 # you can set custom ssh options
 # it's possible to pass any option but you need to keep in mind that net/ssh understand limited list of options
@@ -29,9 +29,26 @@ server 'www2257ue.sakura.ne.jp', user: 'shun', roles: %w{web app db}
 
 # fetch(:default_env).merge!(rails_env: :production)
 
+# set :ssh_options, {
+#   keys: [File.expand_path('~/.ssh/id_rsa')],
+#   forward_agent: true,
+#   port: 10021,
+#   auth_methods: %w(publickey)
+# }
+
+#======================================
+set :stage, :production
+set :rails_env, 'production'
+set :migration_role, 'db'
+
+role :all, %w{pi@raspberrypi.local pi@raspberrypi2.local pi@raspberrypi4.local}
+role :web, %w{pi@raspberrypi.local}
+role :app, %w{pi@raspberrypi2.local}
+role :db,  %w{pi@raspberrypi4.local}
+
 set :ssh_options, {
   keys: [File.expand_path('~/.ssh/id_rsa')],
   forward_agent: true,
-  port: 10021,
+  port: 22,
   auth_methods: %w(publickey)
 }
