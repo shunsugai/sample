@@ -46,6 +46,8 @@ role :web, %w{pi@raspberrypi.local}
 role :app, %w{pi@raspberrypi2.local}
 role :db,  %w{pi@raspberrypi4.local}
 
+# role :app, %w{pi@raspberrypi.local pi@raspberrypi2.local pi@raspberrypi4.local}
+
 set :ssh_options, {
   keys: [File.expand_path('~/.ssh/id_rsa')],
   forward_agent: true,
