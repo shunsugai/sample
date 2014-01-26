@@ -7,6 +7,7 @@ set :migration_role, 'db'
 # Supports bulk-adding hosts to roles, the primary
 # server in each group is considered to be the first
 # unless any hosts have the primary property set.
+role :all, %w{pi@raspberrypi.local pi@raspberrypi2.local pi@raspberrypi4.local}
 role :web, %w{pi@raspberrypi.local}
 role :app, %w{pi@raspberrypi2.local}
 role :db,  %w{pi@raspberrypi4.local}
