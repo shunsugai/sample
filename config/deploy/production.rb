@@ -43,7 +43,7 @@ set :migration_role, 'db'
 
 # role :all, %w{pi@raspberrypi.local pi@raspberrypi2.local pi@raspberrypi4.local}
 role :web, %w{pi@raspberrypi.local}
-role :app, %w{pi@raspberrypi2.local}
+role :app, %w{pi@raspberrypi2.local pi@raspberrypi3.local}
 role :db,  %w{pi@raspberrypi4.local}
 
 # role :app, %w{pi@raspberrypi.local pi@raspberrypi2.local pi@raspberrypi4.local}
