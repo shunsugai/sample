@@ -29,9 +29,9 @@ server 'www2257ue.sakura.ne.jp', user: 'shun', roles: %w{web app db}
 
 # fetch(:default_env).merge!(rails_env: :production)
 
-# set :ssh_options, {
-#   keys: [File.expand_path('~/.ssh/id_rsa')],
-#   forward_agent: true,
-#   port: 10021,
-#   auth_methods: %w(publickey)
-# }
+set :ssh_options, {
+  keys: [File.expand_path('~/.ssh/id_rsa')],
+  forward_agent: true,
+  port: 10021,
+  auth_methods: %w(publickey)
+}
