@@ -4,8 +4,8 @@ source 'https://rubygems.org'
 gem 'rails', '4.0.2'
 
 # Use sqlite3 as the database for Active Record
-gem 'mysql2', '0.3.14', group: [:production, :test]
-gem 'sqlite3', group: [:development, :staging]
+gem 'mysql2', '0.3.14'
+# gem 'sqlite3', group: [:development, :staging]
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
