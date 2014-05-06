@@ -1,4 +1,5 @@
 set :stage, :production
+set :rails_env, 'production'
 set :migration_role, 'db'
 
 role :web, %w{shun@www2257ue.sakura.ne.jp}
