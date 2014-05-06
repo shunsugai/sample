@@ -41,7 +41,7 @@ gem 'unicorn'
 
 # Use Capistrano for deployment
 group :development do
-  gem 'capistrano', '~> 3.1.0', :require => false
+  gem 'capistrano', '3.2.1', :require => false
   gem 'capistrano-rails', :require => false
   gem 'capistrano-rbenv',   github: 'capistrano/rbenv', :require => false
   gem 'capistrano-bundler', github: 'capistrano/bundler', :require => false
