@@ -1,7 +1,4 @@
 SampleCapistrano::Application.routes.draw do
-  devise_for :people, ActiveAdmin::Devise.config
-  devise_for :admin_users, ActiveAdmin::Devise.config
-  ActiveAdmin.routes(self)
   root 'people#index'
   resources :people
 
